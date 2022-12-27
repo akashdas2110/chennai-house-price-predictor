@@ -75,7 +75,7 @@ load_saved_artifacts()
 get_location_names()
 
 def header(url):
-    st.markdown(f'<p style="font-family:sans-serif; color:Red; font-size: 42px;">{url}</p>',
+    st.markdown(f'<p style="font-family:sans-serif; color:White; font-size: 32px;">{url}</p>',
                 unsafe_allow_html=True)
 location=st.selectbox(
      'Select the location',
