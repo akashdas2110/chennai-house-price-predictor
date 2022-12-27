@@ -74,7 +74,9 @@ set_bg_hack_url()
 load_saved_artifacts()
 get_location_names()
 
-
+def header(url):
+    st.markdown(f'<p style="font-family:sans-serif; color:Red; font-size: 42px;">{url}</p>',
+                unsafe_allow_html=True)
 location=st.selectbox(
      'Select the location',
      (__locations))
@@ -87,5 +89,5 @@ if st.button('Estimate the Price'):
 
 
     result = get_estimated_price(location, sqft,status, bhk)
-    # 4. Display
-    st.header(str(result)+" "+"lakhs")
+    
+    header(str(result)+" "+"lakhs")
